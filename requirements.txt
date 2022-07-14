@@ -1,0 +1,14 @@
+requests==2.22.0
+beautifulsoup4==4.11.1
+httpx==1.0.0b0
+trio==0.21.0
+holehe==1.60.3
+phonenumbers==8.12.50
+geopy==2.2.0
+pyfiglet==0.7
+termcolor==1.1.0
+dnspython==2.2.1
+simplejson==3.16.0
+bs4==0.0.1
+argparse==1.4.0
+opencage==2.0.0

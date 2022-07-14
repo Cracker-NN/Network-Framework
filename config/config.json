@@ -1,0 +1,18 @@
+{
+  "key": {
+    "ipinfo": "",
+    "opengrab": ""
+  },
+  "Profile":{
+    "name": "",
+    "Install-Date": ""
+  },
+  "links":{
+    "ip-Info": "https://ipinfo.io/",
+    "opencage": "https://opencagedata.com/"
+  },
+  "termux-url": {
+    "hacker-target": "http://api.hackertarget.com/",
+    "ip-Info": "https://ipinfo.io/"
+  }
+}
