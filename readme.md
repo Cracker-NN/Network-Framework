@@ -279,7 +279,7 @@ root@Ubuntu $: python3 network.py -q none
 - **reinstall it**
 
 ## author
-- [@Aman Raj]((https://github.com/amanraj-bose))
+- [@Aman Raj](https://github.com/amanraj-bose)
 
 ## License
 <p align="center">
