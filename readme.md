@@ -28,7 +28,7 @@
 
               sudo apt install git or apt install git
 #             
-              git clone https://github.com/amanraj-bose/Network-Framework.git
+              git clone https://github.com/amanraj-bose/Network_Framework.git
 #
               cd Network-Framework
 
