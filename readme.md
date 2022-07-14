@@ -16,6 +16,8 @@
 
 **_THIS TOOL USING FOR GATHERING INFORMATION FROM ANY WEBSITES, Email Address, and Phone Number._**
 
+`Note : ` Enter url without www example: https://example.com/
+
 ## Platform Support & Tested
 - Linux
     - Kali Linux
