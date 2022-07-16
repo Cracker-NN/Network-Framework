@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 import socket
 import re
 import geopy
-import dns.resolver as dns
 import os
 
 
@@ -47,26 +46,6 @@ class Scan():
             except requests.ConnectionError:
                 print("", end="")
                 
-    def dns_lookup(self, url):
-        AAAA = dns.resolve(str(url), 'AAAA')
-        for A in AAAA:
-            print("\033[1;31m[+]\033[0;37mAAAA => {}".format(str(A)))
-            
-        MX = dns.resolve(str(url), 'MX')
-        for M in MX:
-            print("\033[1;31m[+]\033[0;37mMX => {}".format(str(M)))
-            
-        NS = dns.resolve(str(url), 'NS')
-        for N in NS:
-            print("\033[1;31m[+]\033[0;37mNS => {}".format(str(N)))
-            
-        TXT = dns.resolve(str(url), 'TXT')
-        for T in TXT:
-            print("\033[1;31m[+]\033[0;37mTXT => {}".format(str(T)))
-        
-        SOA = dns.resolve(str(url), 'SOA')
-        for S in SOA:
-            print("\033[1;31m[+]\033[0;37mSOA => {}".format(str(S)))
                     
     def track(self, ip:any):
         geography = geopy.Nominatim(user_agent="geoapiExercises")
@@ -186,10 +165,7 @@ class Scan():
         print("\033[1;31m[+]\033[0;37mWebsite Server Location Found => {}\033[0m".format(self.location2))
         print("\033[1;31m[+]\033[0;37mWebsite Server Found => {}".format(self.carrier))
         print("\033[1;31m[+]\033[0;37mWebsite Server Time Zone Found => {}".format(self.timeZone))
-        if os.path.isdir("/data/data/com.termux/files/home") == True:
-            self.dns_for_termux(str(self.url).split("/")[2])
-        else:
-            self.dns_lookup(str(self.url).split("/")[2])
+        self.dns_for_termux(str(self.url).split("/")[2])
         # CMS Checking
         
         # Wordpress url Checking
