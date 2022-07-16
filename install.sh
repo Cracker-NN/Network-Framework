@@ -106,7 +106,7 @@ function main(){
 if [ -d "$DIRECTORY" ]; then
     internet_check
     printf '\033[1;32m[+] \033[0;37m OS found => Termux\n'
-    py
+    py_termux
     module_termux
 else
     internet_check
