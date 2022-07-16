@@ -4,8 +4,10 @@ from bs4 import BeautifulSoup
 import socket
 import re
 import geopy
+import dns.resolver as dns
 import os
 
+# dns.resolver.NoAnswer
 
 class Scan():
     def __init__(self, url:str, api:any) -> str:
@@ -24,19 +26,32 @@ class Scan():
             json.dump(results, jsonc, indent=4, sort_keys=False)
         with open("tools/web/temp_capture.json", "r") as final:
             data = json.load(final)
-        
-        AAAA = data['AAAA']
-        MX = data['MX']
-        NS = data['NS']
-        TXT = data['TXT']
-        SOA = data['SOA']
-        
-        print("\033[1;31m[+]\033[0;37mAAAA => {}".format(str(AAAA)))
-        print("\033[1;31m[+]\033[0;37mMX => {}".format(str(MX)))
-        print("\033[1;31m[+]\033[0;37mNS => {}".format(str(NS)))
-        print("\033[1;31m[+]\033[0;37mTXT => {}".format(str(TXT)))
-        print("\033[1;31m[+]\033[0;37mSOA => {}".format(str(SOA)))
-    
+        try:
+            AAAA = data['AAAA']
+            print("\033[1;31m[+]\033[0;37mAAAA => {}".format(str(AAAA)))
+        except Exception and KeyError:
+            print("\033[1;31m[+]\033[0;37mAAAA => Not Found")
+        try:
+            MX = data['MX']
+            print("\033[1;31m[+]\033[0;37mMX => {}".format(str(MX)))
+        except Exception and KeyError:
+            print("\033[1;31m[+]\033[0;37mMX => Not Found")
+        try:
+            NS = data['NS']
+            print("\033[1;31m[+]\033[0;37mNS => {}".format(str(NS)))
+        except Exception and KeyError:
+            print("\033[1;31m[+]\033[0;37mNS => Not Found")
+        try:
+            TXT = data['TXT']
+            print("\033[1;31m[+]\033[0;37mTXT => {}".format(str(TXT)))
+        except Exception and KeyError:
+            print("\033[1;31m[+]\033[0;37mTXT => Not Found")
+        try:
+            SOA = data['SOA']
+            print("\033[1;31m[+]\033[0;37mSOA => {}".format(str(SOA)))
+        except Exception and KeyError:
+            print("\033[1;31m[+]\033[0;37mSOA => Not Found")
+
     def domain_scanner(self, domain_name,sub_domnames):
         for subdomain in sub_domnames:
             url = f"https://{subdomain}.{domain_name}"
@@ -46,7 +61,42 @@ class Scan():
             except requests.ConnectionError:
                 print("", end="")
                 
-                    
+    def dns_lookup(self, url):
+        try:
+            AAAA = dns.resolve(str(url), 'AAAA')
+            for A in AAAA:
+                print("\033[1;31m[+]\033[0;37mAAAA => {}".format(str(A)))
+        except dns.NoAnswer and dns.NoRootSOA and Exception:
+            print("\033[1;31m[+]\033[0;37mAAAA => Not Found")
+        
+        try:    
+            MX = dns.resolve(str(url), 'MX')
+            for M in MX:
+                print("\033[1;31m[+]\033[0;37mMX => {}".format(str(M)))
+        except dns.NoAnswer and dns.NoRootSOA and Exception:
+            print("\033[1;31m[+]\033[0;37mMX => Not Found")
+        
+        try:    
+            NS = dns.resolve(str(url), 'NS')
+            for N in NS:
+                print("\033[1;31m[+]\033[0;37mNS => {}".format(str(N)))
+        except dns.NoAnswer and dns.NoRootSOA and Exception:
+            print("\033[1;31m[+]\033[0;37mNS => Not Found")
+        
+        try:    
+            TXT = dns.resolve(str(url), 'TXT')
+            for T in TXT:
+                print("\033[1;31m[+]\033[0;37mTXT => {}".format(str(T)))
+        except dns.NoAnswer and dns.NoRootSOA and Exception:
+            print("\033[1;31m[+]\033[0;37mTXT => Not Found")
+        
+        try:    
+            SOA = dns.resolve(str(url), 'SOA')
+            for S in SOA:
+                print("\033[1;31m[+]\033[0;37mSOA => {}".format(str(S)))
+        except dns.NoAnswer and dns.NoRootSOA and Exception:
+            print("\033[1;31m[+]\033[0;37mSOA => Not Found")   
+                
     def track(self, ip:any):
         geography = geopy.Nominatim(user_agent="geoapiExercises")
         r = requests.get(f"https://ipinfo.io/{ip}?token={self.api}")
@@ -165,7 +215,10 @@ class Scan():
         print("\033[1;31m[+]\033[0;37mWebsite Server Location Found => {}\033[0m".format(self.location2))
         print("\033[1;31m[+]\033[0;37mWebsite Server Found => {}".format(self.carrier))
         print("\033[1;31m[+]\033[0;37mWebsite Server Time Zone Found => {}".format(self.timeZone))
-        self.dns_for_termux(str(self.url).split("/")[2])
+        if os.path.isdir("/data/data/com.termux/files/home") == True:
+            self.dns_for_termux(str(self.url).split("/")[2])
+        else:
+            self.dns_lookup(str(self.url).split("/")[2])
         # CMS Checking
         
         # Wordpress url Checking
