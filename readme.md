@@ -29,11 +29,11 @@
     - Termux
 ## Fetching Tool From github
 
-              sudo apt install git or apt install git
+`sudo apt install git or apt install git`
 #             
-              git clone https://github.com/amanraj-bose/Network-Framework.git
+`git clone https://github.com/amanraj-bose/Network-Framework.git`
 #
-              cd Network-Framework
+`cd Network-Framework`
 
 ## Installation
 - <mark>**Linux**</mark>
