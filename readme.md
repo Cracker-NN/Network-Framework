@@ -4,13 +4,13 @@
 <p align="center">
     <a href="https://twitter.com/amanraj_Phunish">
     <img alt="Twitter URL" src="https://img.shields.io/twitter/url?label=Twitter&style=social&url=https%3A%2F%2Ftwitter.com%2Famanraj_Phunish"></a>
-    <img src="https://img.shields.io/badge/Version-0.1-blue">
+    <a href="#"><img src="https://img.shields.io/badge/Version-0.1-blue"></img></a>
     <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green"></a>
     <br>
     <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.8-blue"></a>
     <a href="https://en.wikipedia.org/wiki/Linux"><img src="https://img.shields.io/badge/Platform-Linux%20Based-yellow"></a>
     <a href="https://youtube.com/"><img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Youtube Badge"/></a>
-    <a href="https://github.com/amanraj-bose/Network-Framework/releases/tag/v0.1.0"><img src="https://img.shields.io/badge/release-0.1.0%20%CE%B2-orange"></img></a>
+    <a href="https://github.com/amanraj-bose/Network-Framework/releases/tag/v0.1.0"><img src="https://img.shields.io/badge/release-0.2.0%20%CE%B2-orange"></img></a>
  </p>
 
 # Network-Framework
