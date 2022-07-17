@@ -12,7 +12,7 @@
     <a href="https://youtube.com/"><img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Youtube Badge"/></a>
     <a href="https://github.com/amanraj-bose/Network-Framework/releases/tag/v0.2.0"><img src="https://img.shields.io/badge/release-0.2.0%20%CE%B2-orange"></img></a>
     <br>
-    <img src="https://img.shields.io/github/languages/code-size/amanraj-bose/Network-Framework"></img>
+    <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/amanraj-bose/Network-Framework?label=Repository">
  </p>
 
 # Network-Framework
