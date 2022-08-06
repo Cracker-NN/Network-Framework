@@ -37,125 +37,11 @@
 #
 ```cd Network-Framework```
 
-## Installation
-- <mark>**Linux**</mark>
-    - Automatic Installation
-        - Sign Up For API Key ` https://ipinfo.io/ ` and ` https://opencagedata.com/users/sign_in#geocoding `
-        - Paste on ` config/config.json `
-            - ```
-                {
-                "key": {
-                    "ipinfo": "<API KEY>",
-                    "opengrab": "<API KEY>"
-                    },
-                "Profile":{
-                    "name": "",
-                    "Install-Date": ""
-                    },
-                "links":{
-                    "ip-Info": "https://ipinfo.io/",
-                    "opencage": "https://opencagedata.com/"
-                    },
-                "termux-url": {
-                "hacker-target": "http://api.hackertarget.com/",
-                "ip-Info": "https://ipinfo.io/"
-                    },
-                }
-                ```
-        - Script Permission ` chmod u+x install.sh ` or ` chmod +x install.sh `
+## Installing Process
 
-        - Run ` sh install.sh ` if any error occurs ` ./install.sh `
-            
-    - Manual Installation
-        - Sign Up For API Key ` https://ipinfo.io/ ` and ` https://opencagedata.com/users/sign_in#geocoding `
-        - Paste on ` config/config.json `
-            - ```
-                {
-                "key": {
-                    "ipinfo": "<API KEY>",
-                    "opengrab": "<API KEY>"
-                    },
-                "Profile":{
-                    "name": "",
-                    "Install-Date": ""
-                    },
-                "links":{
-                    "ip-Info": "https://ipinfo.io/",
-                    "opencage": "https://opencagedata.com/"
-                    },
-                "termux-url": {
-                "hacker-target": "http://api.hackertarget.com/",
-                "ip-Info": "https://ipinfo.io/"
-                    },
-                }
-                ```
-        - Package Installation
-            - ` sudo apt install python3 -y `
-            - ` sudo apt install python3-pip -y `
-            - ` sudo apt install php -y `
-            - ` sudo apt install rustc -y `
-            - ` sudo apt install cargo -y `
-            - ` sudo apt install sox -y `
-        
-        - Module Installation
-            ` sudo pip3 install -r requirements.txt `
+<a href="https://github.com/amanraj-bose/.github/install.md">Installing Network-Framework</a>
 
-- <mark>**Termux ( ANDROID )**</mark>
-    - Automatic Installation
-        - Sign Up For API Key ` https://ipinfo.io/ `
-        - Paste on ` config/config.json `
-            - ```
-                {
-                "key": {
-                    "ipinfo": "<API KEY>",
-                    "opengrab": ""
-                    },
-                "Profile":{
-                    "name": "",
-                    "Install-Date": ""
-                    },
-                "links":{
-                    "ip-Info": "https://ipinfo.io/",
-                    "opencage": "https://opencagedata.com/"
-                    },
-                "termux-url": {
-                "hacker-target": "http://api.hackertarget.com/",
-                "ip-Info": "https://ipinfo.io/"
-                    },
-                }
-                ```
-        - Script Permission ` chmod u+x install.sh ` or ` chmod +x install.sh `
-        - Run ` sh install.sh ` if any error occurs ` ./install.sh `
-    
-    - Manual Installation
-        - Sign Up For API Key ` https://ipinfo.io/ `
-        - Paste on ` config/config.json `
-            - ```
-                {
-                "key": {
-                    "ipinfo": "<API KEY>",
-                    "opengrab": ""
-                    },
-                "Profile":{
-                    "name": "",
-                    "Install-Date": ""
-                    },
-                "links":{
-                    "ip-Info": "https://ipinfo.io/",
-                    "opencage": "https://opencagedata.com/"
-                    },
-                "termux-url": {
-                "hacker-target": "http://api.hackertarget.com/",
-                "ip-Info": "https://ipinfo.io/"
-                    },
-                }
-                ```
-        - Package Installation
-            - ` pkg install python3 -y `
-            - ` pkg install php -y `
-        
-        - Module Installation
-            ` pip3 install -r requirements.txt `
+
 #
 ### Module List
 - Python Modules
@@ -274,14 +160,37 @@ root@Ubuntu $: python3 network.py -q none
 
 <!-- - ip_locate -->
 
+# Error Patch ID
+- **75621AMβ** `Fixed`
+
+
+## ERRORS
+
+- **Installation Error**
+    `Error: Internet Connection Failed`
+    
+    *Error Fixed*
+    - *Linux*
+        - `sudo apt install wget -y`
+    - *Termux*
+        - `apt install wget -y`
+    - *Error Information*
+    
+    ```This Error due to wget package because wget package is not installed in termux or some other linux based system.```
 ## Update's
 
-`Patch Update on Beta Version 1 month ago`
+### Patch ID : **NF-1β**
+
++ *MAC Address Finder*      `type: New`
++ *ip address*      `type: Global`
+
 
 ## Update-Process
 
 - ****Unistall the network tool****
 - **reinstall it**
+
+`Note` *:*  `4 months for next update`
 
 ## author
 - [@Aman Raj](https://github.com/amanraj-bose)
@@ -372,3 +281,5 @@ modification follow.
 # Special Thanks to Thumb Group
 
 > **special thanks to Thumb Group for their support**
+
+<!--  -->
