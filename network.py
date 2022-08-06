@@ -1,6 +1,6 @@
 import os
 import socket
-from modules.help_tool import iplocate, honeypot, phone_number, mail, web_sc_adv, web_scan, url_scrap, url_capturing
+from modules.help_tool import iplocate, honeypot, phone_number, mail, web_sc_adv, web_scan, url_scrap, url_capturing, MAC_Locater
 import sys
 from tools.location.ip_location import Geo_Loc
 from modules.color import bright, low
@@ -18,7 +18,7 @@ import random
 import argparse
 from modules.internet import internet
 from modules.sprint import sprint
-
+from tools.location.maclookup import MacAddress
 
 
 command = HoneyPot()
@@ -34,8 +34,6 @@ class Network():
     
     def mails(self, mail):
         return Email(mail)
-    
-    
     
     def Advance_web(self):
         web_adv_scanner = str(input(f"\033[1;37mNetwork\033[1;32m:\033[1;37mWEB Scanner Advance\033[1;32m:\033[1;37mUrl >\033[0m "))
@@ -202,6 +200,26 @@ class Network():
                 self.IP()
         except IndexError:
             self.IP()
+    
+    def MAC(self):
+        self.mac = input(f"\033[1;37mNetwork\033[1;32m:\033[1;37mMAC_Locater\033[1;32m:\033[1;37mMAC >\033[0m ")
+        try:
+            if self.mac == "exit":
+                sys.exit(0)
+            elif self.mac == "cls":
+                os.system("clear")
+                self.MAC()
+            elif self.mac == "back":
+                self.interface()
+            elif self.mac == "show options":
+                print(MAC_Locater)
+                self.MAC()
+            else:
+                self.mac = self.mac.split()[2]
+                MacAddress(mac=self.mac)
+                self.MAC()
+        except IndexError:
+            self.MAC()
 
     def HoneyPot(self):
         command = HoneyPot()
@@ -280,27 +298,15 @@ class Network():
                 os.system("clear")
             else:
                 self.HoneyPot()
-
-
-    def globals(self):
-        if self.user == "help" or self.user == "?":
-            print(helps)
-        elif self.user == "cls":
-            os.system("clear")
-        elif self.user == "exit":
-            sys.exit(0)
-        else:
-            print( f"{bright.red}[*] {low.white}Invalid Command{bright.off}" )
-    def chock(self):
-        if self.user.isspace():
-            pass
             
     def interface(self):
         while True:
             self.user = input(f"\033[1;37mNetwork\033[1;32m:\033[1;37m >\033[0m ")
             # Use Function Define
             """
-            >>> use toolname
+            >>> import network
+            
+            >>> network.interface()
             
             """
             if self.user == "use honeypot":
@@ -331,6 +337,9 @@ class Network():
             elif self.user == "use url_scr":
                 print("\033[0;37mType \033[0;31m`set url < URL >\033[0;37m` for set the Url For Scraping")
                 self.url_scraping()
+            elif self.user == "use MAC_Locater":
+                print("\033[0;37mType \033[0;31m`set mac < MAC >\033[0;37m` for set the MAC Address For Extracting")
+                self.MAC()
                 
             # GLobal Functions
             
@@ -342,6 +351,10 @@ class Network():
                 sys.exit( 0 )
             elif self.user == "use":
                 print(helps)
+            elif self.user == "ipconfig":
+                hostname = socket.gethostname()
+                ip_address = socket.gethostbyname(hostname)
+                print("\033[1;32m[+] \033[0;37m IP address => {}".format(ip_address))
             # Help Functions
             
             elif self.user == "help honeypot":
@@ -360,7 +373,10 @@ class Network():
                 print(url_capturing)
             elif self.user == "help url_scr":
                 print(url_scrap)
-                
+            elif self.user == "help MAC_Locater":
+                print(MAC_Locater)
+            
+            
             # Non-GLobal Functions
             elif self.user == "banner":
                 print( termcolor.colored( pyfiglet.figlet_format( "Network", font=random.choice(font), justify="center" ),
