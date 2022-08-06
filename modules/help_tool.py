@@ -153,3 +153,20 @@ web_scan = """
                         |----> web_sc < url >
                         |----> Parameter = 1
 """
+MAC_Locater = """
+▪( MAC_Locater )
+        |
+        |
+        |-------->( MAC Information )
+        |               |
+        |               |---> Company Name
+        |               |---> Type
+        |               |---> Country
+        |               |---> Address
+        |
+        |-------> ( Arguments )
+                        |
+                        |---> MAC_Locater < MAC >
+                        |---> Parameter = 1
+
+"""
