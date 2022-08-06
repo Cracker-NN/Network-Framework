@@ -39,7 +39,7 @@
 
 ## Installing Process
 
-<a href="https://github.com/amanraj-bose/Network-Framework/.github/install.md">Installing Network-Framework</a>
+<a href="https://github.com/amanraj-bose/Network-Framework/blob/main/.github/install.md">Installing Network-Framework</a>
 
 
 #
