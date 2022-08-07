@@ -169,9 +169,7 @@ class Network():
                     phone_numbers.termux(self._)
                     self.phone_number()
                 else:
-                    with open("config/config.json", "r") as f:
-                        data = json.load(f)["key"]["opengrab"]
-                    phone_numbers.extract(self.number, data)
+                    phone_numbers.extract(self._)
                     self.phone_number()
                     
         except IndexError:
