@@ -57,7 +57,7 @@ function py_termux () {
 
 # Python Module Manager for linux
 function module_linux () {
-  for item in {"trio","beautifulsoup4","httpx","holehe","phonenumbers","geopy","pyfiglet","termcolor","dnspython","simplejson","bs4","opencage","requests"}; do
+  for item in {"trio","beautifulsoup4","httpx","holehe","phonenumbers","pyfiglet","termcolor","dnspython","simplejson","bs4","requests"}; do
     module=$(pip3 list | grep ${item} | awk '{print $1}')
     if [ "${item}" ==  "$module" ]; then
         printf "\033[1;32m[+] \033[0;37mModule Found => $module\n"
@@ -71,7 +71,7 @@ function module_linux () {
 }
 
 function module_termux () {
-  for item in {"requests","beautifulsoup4","bs4","httpx","trio","holehe","phonenumbers","geopy","pyfiglet","termcolor","dnspython","simplejson","argparse"}; do
+  for item in {"requests","beautifulsoup4","bs4","httpx","trio","holehe","phonenumbers","pyfiglet","termcolor","dnspython","simplejson","argparse"}; do
     module=$(pip3 list | grep ${item} | awk '{print $1}')
     if [ "${item}" ==  "$module" ]; then
         printf "\033[1;32m[+] \033[0;37mModule Found => $module\n"
@@ -105,11 +105,13 @@ function main(){
     DIRECTORY='/data/data/com.termux/files/home/'
 if [ -d "$DIRECTORY" ]; then
     internet_check
+    apt install -y wget
     printf '\033[1;32m[+] \033[0;37m OS found => Termux\n'
     py_termux
     module_termux
 else
     internet_check
+    sudo apt install -y wget
     printf '\033[1;32m[+] \033[0;37m OS found => Linux\n'
     os
     manager
