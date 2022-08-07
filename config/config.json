@@ -1,7 +1,6 @@
 {
   "key": {
-    "ipinfo": "",
-    "opengrab": ""
+    "ipinfo": ""
   },
   "Profile":{
     "name": "",
@@ -9,9 +8,10 @@
   },
   "links":{
     "ip-Info": "https://ipinfo.io/",
-    "opencage": "https://opencagedata.com/"
+    "NumVerify": "https://numverify.com/"
   },
   "termux-url": {
+    "NumVerify": "https://numverify.com/",
     "hacker-target": "http://api.hackertarget.com/",
     "ip-Info": "https://ipinfo.io/"
   }
