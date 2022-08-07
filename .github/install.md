@@ -2,54 +2,55 @@
 
 - <mark>**Linux**</mark>
     - Automatic Installation
-        - Sign Up For API Key ` https://ipinfo.io/ ` and ` https://opencagedata.com/users/sign_in#geocoding `
+        - Sign Up For API Key ` https://ipinfo.io/ `
         - Paste on ` config/config.json `
             - ```
                 {
-                "key": {
-                    "ipinfo": "<API KEY>",
-                    "opengrab": "<API KEY>"
+                    "key": {
+                        "ipinfo": "API KEY"
                     },
-                "Profile":{
-                    "name": "",
-                    "Install-Date": ""
-                    },
-                "links":{
-                    "ip-Info": "https://ipinfo.io/",
-                    "opencage": "https://opencagedata.com/"
-                    },
-                "termux-url": {
-                "hacker-target": "http://api.hackertarget.com/",
-                "ip-Info": "https://ipinfo.io/"
-                    },
-                }
+                    "Profile":{
+                        "name": "",
+                        "Install-Date": ""
+                     },
+                    "links":{
+                        "ip-Info": "https://ipinfo.io/",
+                        "NumVerify": "https://numverify.com/"
+                     },
+                    "termux-url": {
+                        "NumVerify": "https://numverify.com/",
+                        "hacker-target": "http://api.hackertarget.com/",
+                        "ip-Info": "https://ipinfo.io/"
+                    }
+                  }
+
                 ```
         - Script Permission ` chmod u+x install.sh ` or ` chmod +x install.sh `
 
         - Run ` sh install.sh ` if any error occurs ` ./install.sh `
             
     - Manual Installation
-        - Sign Up For API Key ` https://ipinfo.io/ ` and ` https://opencagedata.com/users/sign_in#geocoding `
+        - Sign Up For API Key ` https://ipinfo.io/ `
         - Paste on ` config/config.json `
             - ```
                 {
-                "key": {
-                    "ipinfo": "<API KEY>",
-                    "opengrab": "<API KEY>"
+                    "key": {
+                        "ipinfo": "API KEY"
                     },
-                "Profile":{
-                    "name": "",
-                    "Install-Date": ""
-                    },
-                "links":{
-                    "ip-Info": "https://ipinfo.io/",
-                    "opencage": "https://opencagedata.com/"
-                    },
-                "termux-url": {
-                "hacker-target": "http://api.hackertarget.com/",
-                "ip-Info": "https://ipinfo.io/"
-                    },
-                }
+                    "Profile":{
+                        "name": "",
+                        "Install-Date": ""
+                     },
+                    "links":{
+                        "ip-Info": "https://ipinfo.io/",
+                        "NumVerify": "https://numverify.com/"
+                     },
+                    "termux-url": {
+                        "NumVerify": "https://numverify.com/",
+                        "hacker-target": "http://api.hackertarget.com/",
+                        "ip-Info": "https://ipinfo.io/"
+                    }
+                  }
                 ```
         - Package Installation
             - ` sudo apt install python3 -y `
@@ -68,23 +69,23 @@
         - Paste on ` config/config.json `
             - ```
                 {
-                "key": {
-                    "ipinfo": "<API KEY>",
-                    "opengrab": ""
+                    "key": {
+                        "ipinfo": "API KEY"
                     },
-                "Profile":{
-                    "name": "",
-                    "Install-Date": ""
-                    },
-                "links":{
-                    "ip-Info": "https://ipinfo.io/",
-                    "opencage": "https://opencagedata.com/"
-                    },
-                "termux-url": {
-                "hacker-target": "http://api.hackertarget.com/",
-                "ip-Info": "https://ipinfo.io/"
-                    },
-                }
+                    "Profile":{
+                        "name": "",
+                        "Install-Date": ""
+                     },
+                    "links":{
+                        "ip-Info": "https://ipinfo.io/",
+                        "NumVerify": "https://numverify.com/"
+                     },
+                    "termux-url": {
+                        "NumVerify": "https://numverify.com/",
+                        "hacker-target": "http://api.hackertarget.com/",
+                        "ip-Info": "https://ipinfo.io/"
+                    }
+                  }
                 ```
         - Script Permission ` chmod u+x install.sh ` or ` chmod +x install.sh `
         - Run ` sh install.sh ` if any error occurs ` ./install.sh `
@@ -94,23 +95,23 @@
         - Paste on ` config/config.json `
             - ```
                 {
-                "key": {
-                    "ipinfo": "<API KEY>",
-                    "opengrab": ""
+                    "key": {
+                        "ipinfo": "API KEY"
                     },
-                "Profile":{
-                    "name": "",
-                    "Install-Date": ""
-                    },
-                "links":{
-                    "ip-Info": "https://ipinfo.io/",
-                    "opencage": "https://opencagedata.com/"
-                    },
-                "termux-url": {
-                "hacker-target": "http://api.hackertarget.com/",
-                "ip-Info": "https://ipinfo.io/"
-                    },
-                }
+                    "Profile":{
+                        "name": "",
+                        "Install-Date": ""
+                     },
+                    "links":{
+                        "ip-Info": "https://ipinfo.io/",
+                        "NumVerify": "https://numverify.com/"
+                     },
+                    "termux-url": {
+                        "NumVerify": "https://numverify.com/",
+                        "hacker-target": "http://api.hackertarget.com/",
+                        "ip-Info": "https://ipinfo.io/"
+                    }
+                  }
                 ```
         - Package Installation
             - ` pkg install python3 -y `
