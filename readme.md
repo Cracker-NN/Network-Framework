@@ -39,7 +39,7 @@
 
 ## Installing Process
 
-<a href="https://github.com/amanraj-bose/Network-Framework/blob/main/.github/install.md">Installing Network-Framework</a>
+<a href="https://github.com/amanraj-bose/.github/install.md">Installing Network-Framework</a>
 
 
 #
@@ -51,14 +51,12 @@
     - trio
     - holehe
     - phonenumbers
-    - geopy
     - pyfiglet
     - termcolor
     - dnspython
     - simplejson
     - bs4
     - argparse
-    - opencage
 
 
 ## Usages
@@ -183,6 +181,7 @@ root@Ubuntu $: python3 network.py -q none
 
 + *MAC Address Finder*      `type: New`
 + *ip address*      `type: Global`
++ *Phone_no* `Type: Module ( Improved )`
 
 
 ## Update-Process
