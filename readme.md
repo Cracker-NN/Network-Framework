@@ -39,9 +39,9 @@
 
 ## Installing Process
 
-<a href="https://github.com/amanraj-bose/.github/install.md">Installing Network-Framework</a>
+<a href="https://github.com/https-github-com-amanraj-bose/Network-Framework/blob/main/.github/install.md">Installing Network-Framework</a>
 
-
+<!-- https://github.com/https-github-com-amanraj-bose/Network-Framework/blob/main/.github/install.md -->
 #
 ### Module List
 - Python Modules
