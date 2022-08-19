@@ -205,11 +205,14 @@ class Network():
                 self.phone_number()
             else:
                 self._ = self.number.split()[2]
+                with open("config/config.json", "r") as fd:
+                    api = json.load(fd)['key']['numVerify']
+
                 if os.path.isdir("/data/data/com.termux/files/home") == True:
-                    phone_numbers.termux(self._)
+                    phone_numbers.termux(self._, api)
                     self.phone_number()
                 else:
-                    phone_numbers.extract(self._)
+                    phone_numbers.extract(self._, api)
                     self.phone_number()
 
         except IndexError:
@@ -355,11 +358,24 @@ class Network():
                     print("\033[0;37mType \033[0;31m`set ip < IP >\033[0;37m` for set the System IP For scanning and \033[0;31m`set template < Template >\033[0;37m`")
                     self.HoneyPot()
             elif self.user == "use ip_locate":
-                print("\033[0;37mType \033[0;31m`set ip < Public IP >\033[0;37m` for set the IP For scanning")
-                self.IP()
+                with open("config/config.json", "r") as ip:
+                    ips = str(json.load(ip)["key"]["ipinfo"])
+                if ips == "" or ips.isspace() == True:
+                    print("\033[0;31mAccess Denied\033[0m")
+                    self.interface()
+                else:
+                    print("\033[0;37mType \033[0;31m`set ip < Public IP >\033[0;37m` for set the IP For scanning")
+                    self.IP()
+
             elif self.user == "use phone_no":
-                print("\033[0;37mType \033[0;31m`set no < Phone Number >\033[0;37m` for set the Phone Number For scanning")
-                self.phone_number()
+                with open("config/config.json", "r") as nv:
+                    numVerify = str(json.load(nv)["key"]["numVerify"])
+                if numVerify == "" or numVerify.isspace() == True:
+                    print("\033[0;31mAccess Denied\033[0m")
+                    self.interface()
+                else:
+                    print("\033[0;37mType \033[0;31m`set no < Phone Number >\033[0;37m` for set the Phone Number For scanning")
+                    self.phone_number()
             elif self.user == "use email_sc":
                 print("\033[0;37mType \033[0;31m`set mail < Mail >\033[0;37m` for set the Email For scanning")
                 self.Email_Scan()
