@@ -361,7 +361,7 @@ class Network():
                 with open("config/config.json", "r") as ip:
                     ips = str(json.load(ip)["key"]["ipinfo"])
                 if ips == "" or ips.isspace() == True:
-                    print("\033[0;31mAccess Denied\033[0m")
+                    print("\033[0;31mAccess Denied Api Not Found\033[0m")
                     self.interface()
                 else:
                     print("\033[0;37mType \033[0;31m`set ip < Public IP >\033[0;37m` for set the IP For scanning")
@@ -371,7 +371,7 @@ class Network():
                 with open("config/config.json", "r") as nv:
                     numVerify = str(json.load(nv)["key"]["numVerify"])
                 if numVerify == "" or numVerify.isspace() == True:
-                    print("\033[0;31mAccess Denied\033[0m")
+                    print("\033[0;31mAccess Denied Api Not Found\033[0m")
                     self.interface()
                 else:
                     print("\033[0;37mType \033[0;31m`set no < Phone Number >\033[0;37m` for set the Phone Number For scanning")
