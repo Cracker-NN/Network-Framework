@@ -189,14 +189,14 @@ root@Ubuntu $: python3 network.py -q none
 
 - **75621AMβ** `Fixed`
 
-`For Seeing , 'what is the error and how is it fixed ?' then, click on it` <a href="https://github.com/https-github-com-amanraj-bose/Network-Framework/blob/main/update_and_error/error.md">https://github.com/https-github-com-amanraj-bose/Network-Framework/blob/main/update_and_error/error.md</a>
+`For Seeing , 'what is the error and how is it fixed ?' then, click on it ` <a href="https://github.com/https-github-com-amanraj-bose/Network-Framework/blob/main/update_and_error/error.md">https://github.com/https-github-com-amanraj-bose/Network-Framework/blob/main/update_and_error/error.md</a>
 
 ## Update's
 
 ### Patch ID : **NF-0.1β**
 ### Patch ID : **NF-0.2β**
 
-`For Seeing , 'what is the New Updates ?' then, click on it https://github.com/https-github-com-amanraj-bose/Network-Framework/blob/main/update_and_error/update.md`
+`For Seeing , 'what is the New Updates ?' then, click on it ` <a href="https://github.com/https-github-com-amanraj-bose/Network-Framework/blob/main/update_and_error/update.md">https://github.com/https-github-com-amanraj-bose/Network-Framework/blob/main/update_and_error/update.md</a>
 
 <!-- Error and Updates -->
 
