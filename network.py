@@ -67,7 +67,7 @@ class Network():
                 self.interface()
             else:
                 dn = Decryptor(os.path.join(str(path.split("file")[1].strip(" "))))
-                print("\033[1;34m[+]\033[0;37mDecrypting The Audio File => {}".format(dn.decryptAudio()))
+                print("\033[1;34m[+] \033[0;37mDecrypting The Audio File Message => {}".format(dn.decryptAudio()))
                 self.decrypter()
         except IndexError:
             self.decrypter()
