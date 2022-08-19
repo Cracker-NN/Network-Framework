@@ -23,45 +23,54 @@
 `Note :` Enter url without www example: https://example.com/
 
 ## Platform Support & Tested
+
 - Linux
-    - Kali Linux
-    - Ubuntu Linux
-    - Debian Linux
-    - Parrot Linux
+  - Kali Linux
+  - Ubuntu Linux
+  - Debian Linux
+  - Parrot Linux
 - Android
-    - Termux
+  - Termux
+
 ## Fetching Tool From github
 
-```sudo apt install git or apt install git```
-#             
-```git clone https://github.com/amanraj-bose/Network-Framework.git```
+`sudo apt install git or apt install git`
+
 #
-```cd Network-Framework```
+
+`git clone https://github.com/https-github-com-amanraj-bose/Network-Framework.git`
+
+#
+
+`cd Network-Framework`
 
 ## Installing Process
 
 <a href="https://github.com/https-github-com-amanraj-bose/Network-Framework/blob/main/.github/install.md">Installing Network-Framework</a>
 
 <!-- https://github.com/https-github-com-amanraj-bose/Network-Framework/blob/main/.github/install.md -->
-#
-### Module List
-- Python Modules
-    - requests
-    - beautifulsoup4
-    - httpx
-    - trio
-    - holehe
-    - phonenumbers
-    - pyfiglet
-    - termcolor
-    - dnspython
-    - simplejson
-    - bs4
-    - argparse
 
+#
+
+### Module List
+
+- Python Modules
+  - requests
+  - beautifulsoup4
+  - httpx
+  - trio
+  - holehe
+  - phonenumbers
+  - pyfiglet
+  - termcolor
+  - dnspython
+  - simplejson
+  - bs4
+  - argparse
 
 ## Usages
-```    
+
+```
 root@Ubuntu $: python3 network.py --help
 
 usage: network.py [-h] [--author AUTHOR] [--version] [--no_banner NO_BANNER]
@@ -81,14 +90,14 @@ optional arguments:
 
 ## Description
 
- ```
-    -h, --help            show this help message and exit.
-    --author, -a AUTHOR   For Seeing Author Name.
-    --version, -v         show program's version number and exit.
-    --no_banner, -q       For No Banner Starting. 
- ```
+```
+   -h, --help            show this help message and exit.
+   --author, -a AUTHOR   For Seeing Author Name.
+   --version, -v         show program's version number and exit.
+   --no_banner, -q       For No Banner Starting.
+```
 
- - Keywords
+- Keywords
 
 ```
     Name                    Description
@@ -101,14 +110,31 @@ optional arguments:
 ## Examples
 
 ```
-root@Ubuntu $: python3 network.py -q none 
+root@Ubuntu $: python3 network.py -q none
 ```
 
 <video src="https://user-images.githubusercontent.com/88227750/178748824-0c2ef687-666c-40d1-a623-19b5232af3bc.mp4" width="800">
 </video>
 
+## Tool Permissions
+
+| S.no  |     Name    |       Info        |             Linux               |           Termux            |
+|:------|:------------|:------------------|:--------------------------------|:----------------------------|
+|   ***0***   |   **HoneyPot**  | Trapping Attacker |           ✔️                    |             ❌             |
+|   ***1***   |   **Ip_Locate** | Locating Victim Location By IP   |           ✔️                    |             ✔️             |
+|   ***2***   |   **Phone_No**  | For Extracting Data From the Phone Number |         ✔️              |             ✔️            |
+|   ***3***   |   **Email_Sc**  | For Extracting Social Media Data By Email |         ✔️              |             ✔️            |
+|   ***4***   |   **Web_Sc_Adv**| Scanning Any website Using Advance Method |         ✔️              |             ✔️            |
+| ***5*** |   **Web_Sc**    | Scanning Any Website Using Basic Method   |         ✔️              |             ✔️            |
+| ***6*** |   **Url_Scr**   | Scraping Https urls from any Website      |         ✔️              |             ✔️            |
+| ***7*** |   **Url_Cp**    | Capturing Specific Tag from the given Website |     ✔️              |             ✔️            |
+| ***8*** |   **MAC_Locater** | Extracting data From the given MAC address  |     ✔️              |             ✔️            |
+| ***9*** |   **Encrypter** | Encrypting The Audio File With Message        |     ✔️              |             ✔️            |
+| ***10***  | **Decrypter** | Decrypting the Encrypted Data.  `Always Decrypt only Network Tool Encrypted Audio Messages` |     ✔️      |     ✔️    |
+
 
 ## Features
+
 - Email Verifier Scan
 - Email Domain Scan
 - Email Social Media Scan
@@ -158,44 +184,36 @@ root@Ubuntu $: python3 network.py -q none
 - Ip Locate -->
 
 <!-- - ip_locate -->
-
+<!-- For Errors And Updates -->
 # Error Patch ID
+
 - **75621AMβ** `Fixed`
 
+`For Seeing , 'what is the error and how is it fixed ?' then, click on it https://github.com/https-github-com-amanraj-bose/Network-Framework/blob/main/update_and_error/error.md`
 
-## ERRORS
-
-- **Installation Error**
-    `Error: Internet Connection Failed`
-    
-    *Error Fixed*
-    - *Linux*
-        - `sudo apt install wget -y`
-    - *Termux*
-        - `apt install wget -y`
-    - *Error Information*
-    
-    ```This Error due to wget package because wget package is not installed in termux or some other linux based system.```
 ## Update's
 
-### Patch ID : **NF-1β**
+### Patch ID : **NF-0.1β**
+### Patch ID : **NF-0.2β**
 
-+ *MAC Address Finder*      `type: New`
-+ *ip address*      `type: Global`
-+ *Phone_no* `Type: Module ( Improved )`
+`For Seeing , 'what is the New Updates ?' then, click on it https://github.com/https-github-com-amanraj-bose/Network-Framework/blob/main/update_and_error/update.md`
 
+<!-- Error and Updates -->
 
 ## Update-Process
 
-- ****Unistall the network tool****
+- \***\*Unistall the network tool\*\***
 - **reinstall it**
 
-`Note` *:*  `4 months for next update`
+`Note` _:_ `2 months for next update`
+
 
 ## author
+
 - [@Aman Raj](https://github.com/amanraj-bose)
 
 ## License
+
 <p align="center">
     <img src=".github/mit.png"></img>
 
@@ -270,11 +288,12 @@ patents cannot be used to render the program non-free.
   The precise terms and conditions for copying, distribution and
 modification follow.
 ```
+
 </p>
 
 ## Copyright
-<mark>**©️ Copyright 2022 Aman Raj. All rights reserved.**</mark>
 
+<mark>**©️ Copyright 2022 Aman Raj. All rights reserved.**</mark>
 
 <hr>
 
