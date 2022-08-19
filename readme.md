@@ -189,7 +189,7 @@ root@Ubuntu $: python3 network.py -q none
 
 - **75621AMβ** `Fixed`
 
-`For Seeing , 'what is the error and how is it fixed ?' then, click on it https://github.com/https-github-com-amanraj-bose/Network-Framework/blob/main/update_and_error/error.md`
+`For Seeing , 'what is the error and how is it fixed ?' then, click on it` <a href="https://github.com/https-github-com-amanraj-bose/Network-Framework/blob/main/update_and_error/error.md">https://github.com/https-github-com-amanraj-bose/Network-Framework/blob/main/update_and_error/error.md</a>
 
 ## Update's
 
