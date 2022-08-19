@@ -12,3 +12,4 @@ bs4==0.0.1
 argparse==1.4.0
 pydub==0.25.1
 Wave==0.0.2
+geopy==2.2.0
