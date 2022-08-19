@@ -59,6 +59,7 @@
             - ` sudo apt install rustc -y `
             - ` sudo apt install cargo -y `
             - ` sudo apt install sox -y `
+            - ` sudo apt install ffmpeg `
         
         - Module Installation
             ` sudo pip3 install -r requirements.txt `
@@ -116,6 +117,7 @@
         - Package Installation
             - ` pkg install python3 -y `
             - ` pkg install php -y `
+            - ` pkg install ffmpeg -y `
         
         - Module Installation
             ` pip3 install -r requirements.txt `
