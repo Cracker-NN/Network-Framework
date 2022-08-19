@@ -137,6 +137,7 @@ if [ -d "$DIRECTORY" ]; then
 else
     internet_check
     sudo apt install -y wget
+    sudo apt install -y xterm
     printf '\033[1;32m[+] \033[0;37m OS found => Linux\n'
     os
     manager
