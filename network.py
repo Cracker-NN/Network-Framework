@@ -1,6 +1,6 @@
 import os
 import socket
-from modules.help_tool import iplocate, honeypot, phone_number, mail, web_sc_adv, web_scan, url_scrap, url_capturing, MAC_Locater
+from modules.help_tool import iplocate, honeypot, phone_number, mail, web_sc_adv, web_scan, url_scrap, url_capturing, MAC_Locater, Encrypt, Decrypt
 import sys
 from tools.location.ip_location import Geo_Loc
 from modules.color import bright, low
@@ -19,6 +19,9 @@ import argparse
 from modules.internet import internet
 from modules.sprint import sprint
 from tools.location.maclookup import MacAddress
+from tools.audio_cryptor.encrypt import Encrypter
+from tools.audio_cryptor.decrypt import Decryptor
+from tools.audio_cryptor.converter import converter, converterWav
 
 
 command = HoneyPot()
@@ -31,10 +34,47 @@ null = "\0"
 class Network():
     def __init__(self):
         pass
-    
+    def encrypter(self):
+        msg = str(input(f"\033[1;37mNetwork\033[1;32m:\033[1;37mEncrypter\033[1;32m:\033[1;37mMessage >\033[0m "))
+        path = str(input(f"\033[1;37mNetwork\033[1;32m:\033[1;37mEncrypter\033[1;32m:\033[1;37mPath >\033[0m "))
+        try:
+            if msg == "cls":
+                os.system("clear")
+            elif msg == "show options":
+                print(Encrypt)
+                self.encrypter()
+            elif msg == "exit":
+                sys.exit(0)
+            elif msg == "back":
+                self.interface()
+            else:
+                en = Encrypter(str(msg.split('msg')[1]), os.path.join(str(path.split("file")[1].strip(" "))))
+                en.encrypt()
+                self.encrypter()
+        except IndexError:
+            self.encrypter()
+    def decrypter(self):
+        path = str(input(f"\033[1;37mNetwork\033[1;32m:\033[1;37mDecrypter\033[1;32m:\033[1;37mPath >\033[0m "))
+        try:
+            if path == "cls":
+                os.system("clear")
+            elif path == "show options":
+                print(Decrypt)
+                self.decrypter()
+            elif path == "exit":
+                sys.exit(0)
+            elif path == "back":
+                self.interface()
+            else:
+                dn = Decryptor(os.path.join(str(path.split("file")[1].strip(" "))))
+                dn.decryptAudio()
+                self.decrypter()
+        except IndexError:
+            self.decrypter()
+
     def mails(self, mail):
         return Email(mail)
-    
+
     def Advance_web(self):
         web_adv_scanner = str(input(f"\033[1;37mNetwork\033[1;32m:\033[1;37mWEB Scanner Advance\033[1;32m:\033[1;37mUrl >\033[0m "))
         try:
@@ -56,7 +96,7 @@ class Network():
                 self.Advance_web()
         except IndexError:
             self.Advance_web()
-            
+
     def web_scraping(self):
         web_adv_scanner = str(input(f"\033[1;37mNetwork\033[1;32m:\033[1;37mWEB Scanner\033[1;32m:\033[1;37mUrl >\033[0m "))
         try:
@@ -75,7 +115,7 @@ class Network():
                 self.web_scraping()
         except IndexError:
             self.web_scraping()
-    
+
     def url_scraping(self):
         web_adv_scanner = str(input(f"\033[1;37mNetwork\033[1;32m:\033[1;37mUrl Scraping\033[1;32m:\033[1;37mUrl >\033[0m "))
         try:
@@ -94,7 +134,7 @@ class Network():
                 self.url_scraping()
         except IndexError:
             self.url_scraping()
-    
+
     def web_caputing_tags(self):
         url = str(input(f"\033[1;37mNetwork\033[1;32m:\033[1;37mWeb Capture Tag\033[1;32m:\033[1;37mUrl >\033[0m "))
         tag = str(input(f"\033[1;37mNetwork\033[1;32m:\033[1;37mWeb Capture Tag\033[1;32m:\033[1;37mTag >\033[0m "))
@@ -125,11 +165,11 @@ class Network():
                 self.web_caputing_tags()
         except IndexError:
             self.web_caputing_tags()
-    
+
     def Email_Scan(self):
-        
+
         mailer = str(input(f"\033[1;37mNetwork\033[1;32m:\033[1;37mEmail Scanner\033[1;32m:\033[1;37mEmail >\033[0m "))
-        
+
         try:
             if mailer == "exit":
                 sys.exit(0)
@@ -147,9 +187,9 @@ class Network():
                     self.Email_Scan()
         except IndexError:
             self.Email_Scan()
-    
+
     def phone_number(self):
-        
+
         phone_numbers = location()
         self.number = str(input(f"\033[1;37mNetwork\033[1;32m:\033[1;37mPhone Number\033[1;32m:\033[1;37mNumber >\033[0m "))
         try:
@@ -171,12 +211,12 @@ class Network():
                 else:
                     phone_numbers.extract(self._)
                     self.phone_number()
-                    
+
         except IndexError:
             self.phone_number()
-        
+
     def IP(self):
-        
+
         ipaddr = Geo_Loc()
         self.geo = input(f"\033[1;37mNetwork\033[1;32m:\033[1;37mIP_Locate\033[1;32m:\033[1;37mIP >\033[0m ")
         try:
@@ -198,7 +238,7 @@ class Network():
                 self.IP()
         except IndexError:
             self.IP()
-    
+
     def MAC(self):
         self.mac = input(f"\033[1;37mNetwork\033[1;32m:\033[1;37mMAC_Locater\033[1;32m:\033[1;37mMAC >\033[0m ")
         try:
@@ -237,9 +277,9 @@ class Network():
                 self.ip = self.honey.split()[2]
         except IndexError:
             self.HoneyPot()
-                
+
         while True:
-            
+
             template = input(f"\033[1;37mNetwork\033[1;32m:\033[1;37mHoneyPot\033[1;32m:\033[1;37mTemplate >\033[0m ")
             if template == "set template denied":
                 try:
@@ -296,16 +336,16 @@ class Network():
                 os.system("clear")
             else:
                 self.HoneyPot()
-            
+
     def interface(self):
         while True:
             self.user = input(f"\033[1;37mNetwork\033[1;32m:\033[1;37m >\033[0m ")
             # Use Function Define
             """
             >>> import network
-            
+
             >>> network.interface()
-            
+
             """
             if self.user == "use honeypot":
                 if os.path.isdir("/data/data/com.termux/files/home") == True:
@@ -338,9 +378,15 @@ class Network():
             elif self.user == "use MAC_Locater":
                 print("\033[0;37mType \033[0;31m`set mac < MAC >\033[0;37m` for set the MAC Address For Extracting")
                 self.MAC()
-                
+            elif self.user == "use Encrypter":
+                print("\033[0;37mType \033[0;31m`set msg < Message >\033[0;37m` for set the Message and \033[0;31m`set file < Audio File >\033[0;37m` For Scanning and Encrypting the AudioFile")
+                self.encrypter()
+            elif self.user == "use Decrypter":
+                print("\033[0;31m`set file < Audio File >\033[0;37m` For Decrypting the AudioFile")
+                self.decrypter()
+
             # GLobal Functions
-            
+
             elif self.user == "help" or self.user == "?":
                 print( helps )
             elif self.user == "cls":
@@ -349,12 +395,20 @@ class Network():
                 sys.exit( 0 )
             elif self.user == "use":
                 print(helps)
+            elif self.user == "cmp":
+                cmp = str(input("\033[1;37mPath\033[1;32m:\033[1;37m >\033[0m "))
+                converter(r"{}".format(cmp))
+            elif self.user == "cwav":
+                cwav = str(input("\033[1;37mPath\033[1;32m:\033[1;37m >\033[0m "))
+                converterWav(r"{}".format(cwav))
             elif self.user == "ipconfig":
                 hostname = socket.gethostname()
                 ip_address = socket.gethostbyname(hostname)
                 print("\033[1;32m[+] \033[0;37m IP address => {}".format(ip_address))
+
+
             # Help Functions
-            
+
             elif self.user == "help honeypot":
                 print(honeypot)
             elif self.user == "help ip_locate":
@@ -373,8 +427,11 @@ class Network():
                 print(url_scrap)
             elif self.user == "help MAC_Locater":
                 print(MAC_Locater)
-            
-            
+            elif self.user == "help Encrypter":
+                print(Encrypt)
+            elif self.user == "help Decrypter":
+                print(Decrypt)
+
             # Non-GLobal Functions
             elif self.user == "banner":
                 print( termcolor.colored( pyfiglet.figlet_format( "Network", font=random.choice(font), justify="center" ),
@@ -385,15 +442,23 @@ class Network():
                     print(tools_temux)
                 else:
                     print(tools)
-            
+
             # Else Statement
             else:
                 if self.user.isalpha() == True:
                     print("\033[1;31m[-] \033[0;37mUnknown Command")
                 elif self.user.isdigit() == True:
                     print("\033[1;31m[-] \033[0;37mUnknown Command")
-                else:
+
+                # Newly Added Functions
+                elif self.user.isspace() == True:
                     pass
+                elif self.user == "":
+                    pass
+                # Newly Added Functions Ended
+                else:
+                    print("\033[1;31m[-] \033[0;37mUnknown Command")
+
     def run(self):
         print( termcolor.colored( pyfiglet.figlet_format( "Network", font=random.choice(font), justify="center" ),
                                   random.choice( color ), attrs=["bold"] ) )
@@ -404,7 +469,7 @@ class Network():
         self.interface()
     def no_banner_run(self):
         self.interface()
-        
+
     def arguments_start(self):
         parser = argparse.ArgumentParser(description="Copyright (c) 2022 to 2030 and it has created by Aman Raj. Our github account is https://github.com/amanraj-bose/,every options have to arguments.")
         parser.add_argument("--author", "-a", help="For Seeing Author Name")
@@ -423,9 +488,9 @@ class Network():
             sprint("Network is Starting.....")
             print("\n")
             self.run()
-        
+
 
 if __name__ == '__main__':
     network = Network()
     network.arguments_start()
-    
+
