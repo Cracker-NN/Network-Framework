@@ -63,7 +63,7 @@ mail = """
         |                       |----------->( Domain Checking )
         |                       |---------->( SocialMedia Account Email Verifying )
         |                                               |
-        |                                               |---------->( Twitter )        
+        |                                               |---------->( Twitter )
         |                                               |---------->( Instagram )
         |                                               |---------->( Spotify )
         |                                               |---------->( GitHub )
@@ -94,7 +94,7 @@ web_sc_adv = """
         |                        |
         |                        |------> ( Basic Information )
         |                        |                |
-        |                        |                |----> Web Scan 
+        |                        |                |----> Web Scan
         |                        |                          |
         |                        |                          |---> Normal Content ( Basic Scan )
         |                        |
@@ -121,7 +121,7 @@ url_scrap = """
         |------------->( Arguments )
                                 |
                                 |----> url_scr < url >
-                                |----> Parameter = 1 
+                                |----> Parameter = 1
 
 """
 url_capturing = """
@@ -140,7 +140,7 @@ web_scan = """
         |
         |
         |--------->( Website Information )
-        |                     |   
+        |                     |
         |                     |-----> Status Code
         |                     |-----> Json File
         |                     |-----> Redirecting info
@@ -169,4 +169,31 @@ MAC_Locater = """
                         |---> MAC_Locater < MAC >
                         |---> Parameter = 1
 
+"""
+Encrypt = """
+▪( Encrypter )
+        |
+        |
+        |-------->( Encrypting Audio )
+        |               |
+        |               |---> Message Encrypting
+        |
+        |
+        |--------> ( Arguments )
+                        |
+                        |---> Encrypter < Message > < AudioFile >
+                        |---> Parameter = 2
+"""
+Decrypt = """
+▪( Decrypter )
+        |
+        |
+        |------>( Decrypting Audio )
+        |               |
+        |               |---> Message Decrypting
+        |
+        |-------> ( Arguments )
+                        |
+                        |---> Decrypter < AudioFile >
+                        |---> Parameters = 2
 """
