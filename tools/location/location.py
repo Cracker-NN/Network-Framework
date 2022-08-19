@@ -6,9 +6,9 @@ import requests
 
 
 class location():
-    def extract(self, number):
+    def extract(self, number, api):
             numbers = str(number)
-            req = requests.get("http://apilayer.net/api/validate?access_key=" + str('ecf584dd7bccdf2c152fdf3f5595ba20') + "&number=" + numbers)
+            req = requests.get("http://apilayer.net/api/validate?access_key=" + str(api) + "&number=" + numbers)
             results = req.json()
             ph = phonenumbers.parse(numbers)
             timezones = timezone.time_zones_for_number(ph)
@@ -30,9 +30,9 @@ class location():
                 print("\033[1;31m[+]\033[0;37mVictim Line Type => {}".format(results['line_type']))
             except KeyError:
                 print("\033[1;31m[+]\033[0;37mVictim Line Type => ")
-    def termux(self, number):
+    def termux(self, number, api):
             numbers = str(number)
-            req = requests.get("http://apilayer.net/api/validate?access_key=" + str('ecf584dd7bccdf2c152fdf3f5595ba20') + "&number=" + numbers)
+            req = requests.get("http://apilayer.net/api/validate?access_key=" + str(api) + "&number=" + numbers)
             results = req.json()
             ph = phonenumbers.parse(numbers)
             timezones = timezone.time_zones_for_number(ph)
