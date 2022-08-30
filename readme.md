@@ -202,7 +202,7 @@ root@Ubuntu $: python3 network.py -q none
 
 ## Update-Process
 
-- \***\*Unistall the network tool\*\***
+- **Unistall the network tool**
 - **reinstall it**
 
 `Note` _:_ `2 months for next update`
